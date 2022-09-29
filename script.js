@@ -1,5 +1,5 @@
-let codificar = document.querySelector('#codificar');
-let decodificar = document.querySelector('#decodificar');
+let codificar = document.querySelector('#code');
+let decodificar = document.querySelector('#decode');
 let resultado = document.querySelector('textarea');
 
 codificar.addEventListener('click', () =>{

@@ -10,24 +10,49 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/25bc4345e8.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
-    <title>Base64</title>
+    <title>Decodificador</title>
 </head>
 <body>
 
     <hr>
     
     <h1>decodificador</h1>
-    <p>.base64</p>
 
-    <section>
-        <div class="code">
-            <button id="codificar">Codificar</button>
-            <button id="decodificar">Decodificar</button>
+    <div class="tag">
+        <p>> base64</p> <p>> cifra_de_césar</p>
+    </div>
+
+    <form>
+
+        <textarea name="" id="" cols="50" rows="3" placeholder="digite aqui"></textarea>
+
+        <label for=""></label> <!--Caixa de selecionar-->
+        <select name="" id="">
+            <option value="">Selecione uma opção</option>
+            <option value="">Base64</option>
+            <option value="">Cifra de César</option>
+        </select>
+
+        <div class="radiobtn"><!--Botões codificar e decodificar-->
+
+            <div>
+                <input type="radio" id="codificar" checked/>
+                <label for="codificar">Codificar</label>
+            </div>
+
+            <div>
+                <input type="radio" id="decodificar"/>
+                <label for="decodificar">Decodificar</label>
+            </div>
         </div>
 
-        <textarea name="" id="" cols="30" rows="10">Escreva seu texto aqui</textarea>
+        <textarea name="" id="" cols="50" rows="3" placeholder="Resultado"></textarea>
 
-    </section>
+        <div class="btn">
+            <button id="resultbtn">Codificar</button>
+        </div>
+
+    </form>
 
     <hr>
 
