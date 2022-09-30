@@ -19,6 +19,8 @@ body {
     color: white;
 }
 
+/* Título e tags */
+
 h1 {
     padding-top: 3%;
     margin-bottom: -40px;
@@ -52,12 +54,14 @@ h1 {
     transition: 0.3s;
 }
 
+/* Todo o conteúdo do formulário */
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0px 500px;
     gap: 10px;
+    width: 60%;
 }
 
 textarea {
@@ -66,16 +70,14 @@ textarea {
     border-radius: 10px;
 }
 
+/* Botão redondo codificar decodificar*/
+
 .radiobtn {
     display: inline-flex;
     justify-content: space-evenly;
 }
 
-.code {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-}
+/* Botão neon */
 
 button {
     margin-bottom: 5%;
@@ -83,7 +85,7 @@ button {
     display: inline-block;
     color: #EEB0FF;
     padding: 16px 64px;
-    border: #EEB0FF 5px solid;
+    border: #EEB0FF 2px solid;
     border-radius: 16px;
     background-color: #2C2C2C;
     box-shadow: inset 0 0 32px 0 #E028E5, 0 0 32px 0 #E028E5;
@@ -114,7 +116,7 @@ button::after {
     right: 0;
     box-shadow: 0 0 128px 32px #E028E5;
     opacity: 0;
-    background-color: #E028E5;
+    border-radius: 16px;
     z-index: -1;
     transition: opacity 100ms linear;
 }
@@ -134,6 +136,8 @@ button:hover {
 section {
     padding-bottom: 3%;
 }
+
+/* Footer */
 
 .social {
     display: flex;
