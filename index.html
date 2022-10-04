@@ -15,56 +15,58 @@
 <body>
 
     <hr>
-    
-    <h1>decodificador</h1>
+    <div class="cont">
 
-    <div class="tag">
-        <p>> base64</p> <p>> cifra de césar</p>
-    </div>
+        <h1>decodificador</h1>
 
-    <form>
+        <div class="tag">
+            <p>> base64</p> <p>> cifra de césar</p>
+        </div>
 
-        <textarea name="texto" id="texto" cols="50" rows="3" placeholder="digite aqui"></textarea> <!-- TEXTO -->
+        <form>
 
-        <label for="select"></label> <!--Caixa de selecionar-->
-        <select name="select" id="select" class="select">
-            <option value="selecione">Selecione uma opção</option>
-            <option value="base64">Base64</option>
-            <option value="cifra">Cifra de César</option>
-        </select>
+            <textarea name="texto" id="texto" cols="50" rows="3" placeholder="digite aqui"></textarea> <!-- TEXTO -->
 
-        <div class="chave-cont"> <!--Chave para a cifra de César-->
-            <label class="chave" for="range">Escolha uma chave:</label>
+            <!--Caixa de selecionar-->
+            <select name="select" id="select" class="select" onclick="selecao()">
+                <option value="selecione">Selecione uma opção</option>
+                <option id="base64" value="base64">Base64</option>
+                <option id="cifra" value="cifra">Cifra de César</option>
+            </select>
 
-            <div class="deslize">
-                <input type="range" value="1" min="1" max="26" class="range" id="range"
+            <div class="chave-cont" id="chaveCont"> <!--Chave para a cifra de César-->
+
+                <label class="chave" for="range">Escolha uma chave:</label>
+
+                <div class="deslize">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
                     oninput="rangenumber.value=value" />
-                <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                </div>
+
             </div>
 
-        </div>
+            <div class="radiobtn"> <!--Botões codificar e decodificar-->
 
-        <div class="radiobtn"> <!--Botões codificar e decodificar-->
+                <div>
+                    <input type="radio" id="codificar" name="selecione" value="codificar"/>
+                    <label for="codificar">Codificar</label>
+                </div>
 
-            <div>
-                <input type="radio" id="codificar" checked/>
-                <label for="codificar">Codificar</label>
+                <div>
+                    <input type="radio" id="decodificar" name="selecione" value="decodificar"/>
+                    <label for="decodificar">Decodificar</label>
+                </div>
             </div>
 
-            <div>
-                <input type="radio" id="decodificar"/>
-                <label for="decodificar">Decodificar</label>
+            <textarea id="resultado" cols="50" rows="3" placeholder="Resultado"></textarea> <!--Resultado-->
+
+            <div class="btn"> <!--Botão para obter o resultado-->
+                <button id="resultbtn"></button>
             </div>
-        </div>
 
-        <textarea name="" id="" cols="50" rows="3" placeholder="Resultado"></textarea> <!--Resultado-->
-
-        <div class="btn"> <!--Botão para obter o resultado-->
-            <button id="resultbtn">Codificar</button>
-        </div>
-
-    </form>
-
+        </form>
+    </div>
     <hr>
 
     <section class="social">
