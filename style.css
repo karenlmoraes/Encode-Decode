@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Silkscreen&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;  
+font-family: 'Silkscreen', cursive; */
 
 @font-face {
     font-family: brittanySignature;
@@ -16,6 +19,7 @@ body {
     flex-direction: column;
     text-align: center;
     margin-top: 3%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ::selection {
@@ -49,6 +53,7 @@ h1 {
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'Silkscreen', cursive;
 }
 
 .tag p:hover {
@@ -69,10 +74,30 @@ form {
     
 }
 
+/* Caixa de selecionar  */
+select {
+    outline: none;
+    border: 0;
+}
+
+.select {
+    background-color: #807d7d;
+    border-radius: .2em;
+    padding: 5px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Caixa de texto  */
+
 textarea {
     background-color: #615959;
     text-align: center;
     border-radius: 10px;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .chave-cont {
@@ -83,13 +108,16 @@ textarea {
 
 .radiobtn {
     display: inline-flex;
-    justify-content: space-evenly;
+    gap: 40px;
+    color: white;
+
 }
 
 /* Botão neon */
 
 button {
     margin-bottom: 5%;
+    font-family: 'Silkscreen', cursive;
     font-size: 20px;
     display: inline-block;
     color: #EEB0FF;
@@ -151,8 +179,10 @@ section {
 .social {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-top: 1%;
+    color: white;
 }
 
 a {
@@ -194,6 +224,16 @@ a:hover {
     position: relative;
 }
 
+.info-titulo {
+    font-family: brittanySignature;
+    font-size: 55px;
+}
+
+.info-paragrafo {
+    font-family: 'Silkscreen', cursive;
+    font-size: 25px;
+}
+
 @keyframes info {
     from {
         opacity: 0;
@@ -209,12 +249,30 @@ a:hover {
     animation: info .3s;
 }
 
-.fechar { /* Botão de fechar*/
+/* Botão de fechar a pop up */
+
+.fechar { 
     position: absolute;
     background-color: transparent;
     padding: 5px 11px;
     border-radius: 50%;
-    top:28%;
+    top: 5%;
     right: 13%;
     z-index: 2000;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #E028E5;
+    border-radius: 20px;
+    border: 3px solid #E028E5;
 }
