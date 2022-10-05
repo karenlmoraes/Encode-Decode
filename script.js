@@ -11,7 +11,7 @@ let resultado = document.getElementById('resultado');
 // Somente se Cifra de César for escolhido, aparecerá a chave.
 function selecao() {
     selecionar.addEventListener("click", function () {
-        if (selecionar.value == "cifra") {
+        if (selecionar.value === "cifra") {
             chaveCifra.style.display = "block";
         } else {
             chaveCifra.style.display = "none";
@@ -43,8 +43,8 @@ function base64() {
 
 // Cifra de César criptography
 function cifraDeCesar() {
-    let texto = document.querySelector('texto').value;
-    let chave = parseInt(document.querySelector('rangenumber').value);
+    let texto = document.querySelector('#texto').value;
+    let chave = parseInt(document.querySelector('#rangenumber').value);
     let saida = '';
   
     if (codificar.checked) {
@@ -80,3 +80,20 @@ resultBtn.addEventListener("click", function (event) {
         resultado.value = base64();
     }
 });
+
+// Modal Base64
+
+function abreInfo(infoID) {
+  const info = document.getElementById(infoID);
+  if (info) {
+    info.classList.add('popup');
+    info.addEventListener('click', (e) => {
+      if (e.target.id == infoID || e.target.className == 'fechar') {
+        info.classList.remove('popup');
+      }
+    });
+  }
+}
+
+const tagBase64 = document.querySelector('.tag64');
+tagBase64.addEventListener('click', () => abreInfo('infoContainer'));

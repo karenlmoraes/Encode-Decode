@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,67 +13,89 @@
     <script src="script.js" defer></script>
     <title>Decodificador</title>
 </head>
+
 <body>
+    <main>
+        <hr>
+        <div class="cont">
 
-    <hr>
-    <div class="cont">
+            <h1>decodificador</h1>
 
-        <h1>decodificador</h1>
+            <div class="tag">
+                <p class="tag64">> base64</p>
+                <p class="tagcifra">> cifra de césar</p>
+            </div>
 
-        <div class="tag">
-            <p>> base64</p> <p>> cifra de césar</p>
+            <form>
+
+                <textarea name="texto" id="texto" cols="50" rows="3" placeholder="digite aqui"></textarea>
+                <!-- TEXTO -->
+
+                <!--Caixa de selecionar-->
+                <select name="select" id="select" class="select" onclick="selecao()">
+                    <option id="option" value="selecione">Selecione uma opção</option>
+                    <option id="base64" value="base64">Base64</option>
+                    <option id="cifra" value="cifra">Cifra de César</option>
+                </select>
+
+                <div class="chave-cont" id="chaveCont">
+                    <!--Chave para a cifra de César-->
+
+                    <label class="chave" for="range">Escolha uma chave:</label>
+
+                    <div class="deslize">
+                        <input type="range" value="1" min="1" max="26" class="range" id="range"
+                            oninput="rangenumber.value=value" />
+                        <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                    </div>
+
+                </div>
+
+                <div class="radiobtn">
+                    <!--Botões codificar e decodificar-->
+
+                    <div>
+                        <input type="radio" id="codificar" name="selecione" value="codificar" checked/>
+                        <label for="codificar">Codificar</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="decodificar" name="selecione" value="decodificar" />
+                        <label for="decodificar">Decodificar</label>
+                    </div>
+                </div>
+
+                <textarea id="resultado" cols="50" rows="3" placeholder="Resultado"></textarea>
+                <!--Resultado-->
+
+                <div class="btn">
+                    <!--Botão para obter o resultado-->
+                    <button id="resultbtn">Codificar Mensagem!</button>
+                </div>
+
+            </form>
+        </div>
+        <hr>
+    </main>
+    <footer>
+        <section class="social">
+            <a href="https://github.com/karenlmoraes" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/karen-moraes-014251150/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </section>
+    </footer>
+
+    <div id="infoContainer" class="info-cont">
+
+        <button class="fechar">x</button>
+
+        <div id="info" class="info">
+            <h2>Base64</h2>
+            <p>A codificação Base64 é um processo de conversão de dados binários em um formato de string ASCII, convertendo esses dados binários em uma representação de caracteres de 6 bits. O método Base64 de codificação é usado quando dados binários, como imagens ou vídeo, são transmitidos por sistemas projetados para transmitir dados em formato de texto simples (ASCII).</p>
         </div>
 
-        <form>
-
-            <textarea name="texto" id="texto" cols="50" rows="3" placeholder="digite aqui"></textarea> <!-- TEXTO -->
-
-            <!--Caixa de selecionar-->
-            <select name="select" id="select" class="select" onclick="selecao()">
-                <option value="selecione">Selecione uma opção</option>
-                <option id="base64" value="base64">Base64</option>
-                <option id="cifra" value="cifra">Cifra de César</option>
-            </select>
-
-            <div class="chave-cont" id="chaveCont"> <!--Chave para a cifra de César-->
-
-                <label class="chave" for="range">Escolha uma chave:</label>
-
-                <div class="deslize">
-                    <input type="range" value="1" min="1" max="26" class="range" id="range"
-                    oninput="rangenumber.value=value" />
-                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
-                </div>
-
-            </div>
-
-            <div class="radiobtn"> <!--Botões codificar e decodificar-->
-
-                <div>
-                    <input type="radio" id="codificar" name="selecione" value="codificar"/>
-                    <label for="codificar">Codificar</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="decodificar" name="selecione" value="decodificar"/>
-                    <label for="decodificar">Decodificar</label>
-                </div>
-            </div>
-
-            <textarea id="resultado" cols="50" rows="3" placeholder="Resultado"></textarea> <!--Resultado-->
-
-            <div class="btn"> <!--Botão para obter o resultado-->
-                <button id="resultbtn"></button>
-            </div>
-
-        </form>
     </div>
-    <hr>
-
-    <section class="social">
-    <a href="https://github.com/karenlmoraes" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/karen-moraes-014251150/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-    </section>
 
 </body>
+
 </html>
