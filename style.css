@@ -1,5 +1,9 @@
-@import url('http://fonts.cdnfonts.com/css/brittany-signature');
-@import url('http://fonts.cdnfonts.com/css/thegoodmonolith');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+
+@font-face {
+    font-family: brittanySignature;
+    src: url(/Fonte/BrittanySignature-LjyZ.otf);
+}
 
 * {
     margin: 0;
@@ -24,7 +28,7 @@ body {
 h1 {
     padding-top: 3%;
     margin-bottom: -40px;
-    font-family: 'Brittany Signature', sans-serif;
+    font-family: brittanySignature;
     color: white;
     font-weight: lighter;
     font-size: 60px;
