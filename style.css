@@ -71,6 +71,10 @@ textarea {
     border-radius: 10px;
 }
 
+.chave-cont {
+    display: none;
+}
+
 /* Botão redondo codificar decodificar*/
 
 .radiobtn {

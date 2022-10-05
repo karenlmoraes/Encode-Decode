@@ -97,3 +97,20 @@ function abreInfo(infoID) {
 
 const tagBase64 = document.querySelector('.tag64');
 tagBase64.addEventListener('click', () => abreInfo('infoContainer'));
+
+// Modal Cifra de Cesar
+
+function abreCesar(cesarID) {
+  const cesar = document.getElementById(cesarID);
+  if (cesar) {
+    cesar.classList.add('popup');
+    cesar.addEventListener('click', (e) => {
+      if (e.target.id == infoID || e.target.className == 'fechar') {
+        info.classList.remove('popup');
+      }
+    });
+  }
+}
+
+const tagCifra = document.querySelector('.tagcifra');
+tagCifra.addEventListener('click', () => abreInfo('cesarContainer'));
